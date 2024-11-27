@@ -10,6 +10,7 @@ const InputAutocomplete = () => {
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [isOptionSelected, setIsOptionSelected] = useState<boolean>(false);
 
+
     const inputRef = useRef<HTMLDivElement>(null);
     const listRef = useRef<HTMLUListElement>(null);
 
