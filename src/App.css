@@ -1,38 +1,45 @@
-.App {
-  text-align: center;
+.autocomplete-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.search-label {
+    font-size: 20px;
+    font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.input-container {
+    position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.autocomplete-input {
+    font-size: 20px;
+    padding: 12px 8px;
+    min-width: 300px;
 }
 
-.App-link {
-  color: #61dafb;
+.suggestions-list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    border: 1px solid #ccc;
+    border-top: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 200px;
+    overflow-y: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.suggestions-list li {
+    padding: 10px;
+}
+
+.suggestion-active,
+.suggestions-list li:hover {
+    background-color: #f4f4f4;
+    cursor: pointer;
 }
